@@ -9,3 +9,4 @@ function map(array, callback) {
 
     return result
 }
+
