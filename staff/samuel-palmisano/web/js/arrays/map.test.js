@@ -34,3 +34,5 @@ if (res instanceof Array
     success('test 2 ok')
 else
     fail('test 2 failed')
+
+// ______________________________________________________________________________

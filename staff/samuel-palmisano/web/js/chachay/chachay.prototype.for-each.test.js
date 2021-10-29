@@ -2,10 +2,10 @@ describe('TEST forEach')
 
 // ______________________________________________________________________________
 
-var animals = ['zebra', 'lion', 'kangoroo', 'hypo', 'elephant', 'dog', 'coco', 'cat']
+var animals = new Chachay('zebra', 'lion', 'kangoroo', 'hypo', 'elephant', 'dog', 'coco', 'cat')
 var res = []
 
-forEach(animals, function (element, index) {
+animals.forEach(function (element, index) {
     res[index] = element
 })
 
@@ -32,15 +32,14 @@ else
     fail('test 1 failed')
 
 // ______________________________________________________________________________
-
-var nums = [1, 2, 3, 4, 5, 6]
+var nums = new Chachay(1, 2, 3, 4, 5, 6)
 var res = []
 
 function pow(num, index) {
     return res[index] = num * num
 }
 
-forEach(nums, pow)
+nums.forEach(pow)
 
 if (res.length === nums.length
     && res[0] === 1
@@ -59,3 +58,37 @@ if (res.length === nums.length
     success('test 2 ok')
 else
     fail('test 2 failed')
+
+// ______________________________________________________________________________
+
+var nums = new Chachay(1, 2, 3)
+var indexes = []
+var arrays = []
+var elements = []
+
+nums.forEach(function (element, index, array) {
+    elements[elements.length] = element
+    indexes[indexes.length] = index
+    arrays[arrays.length] = array
+})
+
+if (elements instanceof Array
+    && elements.length === nums.length
+    && elements[0] === nums[0]
+    && elements[1] === nums[1]
+    && elements[2] === nums[2]
+    && indexes.length === nums.length
+    && indexes[0] === 0
+    && indexes[1] === 1
+    && indexes[2] === 2
+    && arrays.length === nums.length
+    && arrays[0] === nums
+    && arrays[1] === nums
+    && arrays[2] === nums
+    && nums.length === 3
+    && nums[0] === 1
+    && nums[1] === 2
+    && nums[2] === 3)
+    success('test 3 ok')
+else
+    fail('test 3 failed')

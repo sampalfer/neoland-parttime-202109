@@ -19,3 +19,12 @@ function slice(arr = [], init = 0, end = arr.length) {
 
     return arrReturn;
 }
+
+// Casos de uso
+
+// Sin parámetros el parámetro init será 0        =)
+// Índice negativo se comenzará por arr.length + init, siendo init negativo =)
+// Si init es mayor a arr.length entonces devuelvo []   =)
+// Si end es negativo entonces arr.length + end, siendo end negativo.   =)
+// si end es omitido entonces end = arr.length      =)
+// si end es mayor a arr.length entonces end = arr.length   =)

@@ -2,16 +2,16 @@ describe('TEST pop')
 
 // ______________________________________________________________________________
 
-var array = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato']
-var res = pop(array)
+var plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato']
+var res = pop(plants)
 
 if (typeof res === 'string'
     && res === 'tomato'
-    && array.length === 4
-    && array[0] === 'broccoli'
-    && array[1] === 'cauliflower'
-    && array[2] === 'cabbage'
-    && array[3] === 'kale')
+    && plants.length === 4
+    && plants[0] === 'broccoli'
+    && plants[1] === 'cauliflower'
+    && plants[2] === 'cabbage'
+    && plants[3] === 'kale')
     success('test 1 ok')
 else
     fail('test 1 failed')

@@ -8,9 +8,9 @@ if (
     typeof res === "boolean"
     && res === true
     )
-    success('test 1 ok')
+    success('test ok')
 else
-    fail('test 1 failed')
+    fail('test failed')
 
 
 // CASE 2
@@ -21,9 +21,9 @@ if (
     typeof res === "boolean"
     && res === false
     )
-    success('test 2 ok')
+    success('test ok')
 else
-    fail('test 2 failed')
+    fail('test failed')
 
 
 // CASE 3
@@ -34,9 +34,9 @@ if (
     typeof res === "boolean"
     && res === true
     )
-    success('test 3 ok')
+    success('test ok')
 else
-    fail('test 3 failed')
+    fail('test failed')
 
 // CASE 4
 
@@ -46,9 +46,9 @@ if (
     typeof res === "boolean"
     && res === false
     )
-    success('test 4 ok')
+    success('test ok')
 else
-    fail('test 4 failed')
+    fail('test failed')
 
 // CASE 5
 
@@ -58,9 +58,9 @@ if (
     typeof res === "boolean"
     && res === false
     )
-    success('test 5 ok')
+    success('test ok')
 else
-    fail('test 5 failed')
+    fail('test failed')
 
 // CASE 6
 
@@ -70,9 +70,9 @@ if (
     typeof res === "boolean"
     && res === false
     )
-    success('test 6 ok')
+    success('test ok')
 else
-    fail('test 6 failed')
+    fail('test failed')
 
 // CASE 7
 
@@ -82,9 +82,9 @@ if (
     typeof res === "boolean"
     && res === true
     )
-    success('test 7 ok')
+    success('test ok')
 else
-    fail('test 7 failed')
+    fail('test failed')
 
 // CASE 8
 
@@ -94,9 +94,9 @@ if (
     typeof res === "boolean"
     && res === true
     )
-    success('test 8 ok')
+    success('test ok')
 else
-    fail('test 8 failed')
+    fail('test failed')
 
 // CASE 9
 
@@ -106,9 +106,9 @@ if (
     typeof res === "boolean"
     && res === false
     )
-    success('test 9 ok')
+    success('test ok')
 else
-    fail('test  9failed')
+    fail('test failed')
 
 // CASE 10
 
@@ -118,11 +118,11 @@ if (
     typeof res === "boolean"
     && res === true
     )
-    success('test 10 ok')
+    success('test ok')
 else
-    fail('test 10 failed')
+    fail('test failed')
 
-// CASE 11
+// CASE 9
 
 var res = includes("Hello world!", "");
 
@@ -130,6 +130,6 @@ if (
     typeof res === "boolean"
     && res === true
     )
-    success('test 11 ok')
+    success('test ok')
 else
-    fail('test 11 failed')
+    fail('test failed')

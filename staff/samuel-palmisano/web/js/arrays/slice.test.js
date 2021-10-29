@@ -1,136 +1,155 @@
-describe('TEST slice');
+describe('TEST slice')
 
-// _____________________________________________________________
+// ______________________________________________________________________________
 
-var res = slice([1, 2, 3, 4, 5], 2);
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+var res = slice(animals, 2)
 
-if (
-    res instanceof Array
+if (res instanceof Array
     && res.length === 3
-    && res[0] === 3
-    && res[1] === 4
-    && res[2] === 5
-    )
+    && res[0] === 'camel'
+    && res[1] === 'duck'
+    && res[2] === 'elephant'
+    && animals.length === 5
+    && animals[0] === 'ant'
+    && animals[1] === 'bison'
+    && animals[2] === 'camel'
+    && animals[3] === 'duck'
+    && animals[4] === 'elephant')
     success('test 1 ok')
 else
     fail('test 1 failed')
 
+// ______________________________________________________________________________
 
-// _______________________________________________________________
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+var res = slice(animals, 2, 4)
 
-var res = slice([1, 2, 3, 4, 5], 1, 3);
-
-if (
-    res instanceof Array
+if (res instanceof Array
     && res.length === 2
-    && res[0] === 2
-    && res[1] === 3
-    )
+    && res[0] === 'camel'
+    && res[1] === 'duck'
+    && animals.length === 5
+    && animals[0] === 'ant'
+    && animals[1] === 'bison'
+    && animals[2] === 'camel'
+    && animals[3] === 'duck'
+    && animals[4] === 'elephant')
     success('test 2 ok')
 else
     fail('test 2 failed')
 
+// ______________________________________________________________________________
 
-// _____________________________________________________________________
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+var res = slice(animals, 1, 7)
 
-var res = slice([1, 2, 3, 4, 5]);
-
-if (
-    res instanceof Array
-    && res.length === 5
-    && res[0] === 1
-    && res[1] === 2
-    && res[2] === 3
-    && res[3] === 4
-    && res[4] === 5
-    )
+if (res instanceof Array
+    && res.length === 4
+    && res[0] === 'bison'
+    && res[1] === 'camel'
+    && res[2] === 'duck'
+    && res[3] === 'elephant'
+    && animals.length === 5
+    && animals[0] === 'ant'
+    && animals[1] === 'bison'
+    && animals[2] === 'camel'
+    && animals[3] === 'duck'
+    && animals[4] === 'elephant')
     success('test 3 ok')
 else
     fail('test 3 failed')
 
-// ____________________________________________________________________________
+// ______________________________________________________________________________
 
-var res = slice([1, 2, 3, 4, 5], -3);
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+var res = slice(animals, 2, 0)
 
-if (
-    res instanceof Array
-    && res.length === 3
-    && res[0] === 3
-    && res[1] === 4
-    && res[2] === 5
-    )
+if (res instanceof Array
+    && res.length === 0
+    && animals.length === 5
+    && animals[0] === 'ant'
+    && animals[1] === 'bison'
+    && animals[2] === 'camel'
+    && animals[3] === 'duck'
+    && animals[4] === 'elephant')
     success('test 4 ok')
 else
     fail('test 4 failed')
 
-// ___________________________________________________________________
+// ______________________________________________________________________________
 
-var res = slice([1, 2, 3, 4, 5], -4, -1);
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+var res = slice(animals, -2)
 
-if (
-    res instanceof Array
-    && res.length === 3
-    && res[0] === 2
-    && res[1] === 3
-    && res[2] === 4
-    )
+if (res instanceof Array
+    && res.length === 2
+    && res[0] === 'duck'
+    && res[1] === 'elephant'
+    && animals.length === 5
+    && animals[0] === 'ant'
+    && animals[1] === 'bison'
+    && animals[2] === 'camel'
+    && animals[3] === 'duck'
+    && animals[4] === 'elephant')
     success('test 5 ok')
 else
     fail('test 5 failed')
 
-// _________________________________________________________________
+// ______________________________________________________________________________
 
-var res = slice([1, 2, 3, 4, 5], 10, -1);
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+var res = slice(animals, -100)
 
-if (
-    res instanceof Array
-    && res.length === 0
-    )
+if (res instanceof Array
+    && res.length === 5
+    && res[0] === 'ant'
+    && res[1] === 'bison'
+    && res[2] === 'camel'
+    && res[3] === 'duck'
+    && res[4] === 'elephant'
+    && animals.length === 5
+    && animals[0] === 'ant'
+    && animals[1] === 'bison'
+    && animals[2] === 'camel'
+    && animals[3] === 'duck'
+    && animals[4] === 'elephant')
     success('test 6 ok')
 else
     fail('test 6 failed')
 
 // ______________________________________________________________________________
 
-var res = slice([1, 2, 3, 4, 5], 0, 40);
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+var res = slice(animals, 2, -1)
 
-if (
-    res instanceof Array
-    && res.length === 5
-    && res[0] === 1
-    && res[1] === 2
-    && res[2] === 3
-    && res[3] === 4
-    && res[4] === 5
-    )
+if (res instanceof Array
+    && res.length === 2
+    && res[0] === 'camel'
+    && res[1] === 'duck'
+    && animals.length === 5
+    && animals[0] === 'ant'
+    && animals[1] === 'bison'
+    && animals[2] === 'camel'
+    && animals[3] === 'duck'
+    && animals[4] === 'elephant')
     success('test 7 ok')
 else
     fail('test 7 failed')
 
-// __________________________________________________________________
+// ______________________________________________________________________________
 
-var res = slice([1, 2, 3, 4, 5], -10, 4);
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+var res = slice(animals, 2, -100)
 
-if (
-    res instanceof Array
-    && res.length === 4
-    && res[0] === 1
-    && res[1] === 2
-    && res[2] === 3
-    && res[3] === 4
-    )
+if (res instanceof Array
+    && res.length === 0
+    && animals.length === 5
+    && animals[0] === 'ant'
+    && animals[1] === 'bison'
+    && animals[2] === 'camel'
+    && animals[3] === 'duck'
+    && animals[4] === 'elephant')
     success('test 8 ok')
 else
     fail('test 8 failed')
-
-// ______________________________________________________________________________
-
-var res = slice([1, 2, 3, 4, 5], 1, -20);
-
-if (
-    res instanceof Array
-    && res.length === 0
-    )
-    success('test 9 ok')
-else
-    fail('test 9 failed')

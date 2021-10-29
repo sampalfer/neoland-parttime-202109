@@ -62,12 +62,13 @@ if (res instanceof Array
     && res[3] === 'Julio'
     && res[4] === 'Yoana'
     && res[5] === 'Blanca')
-    success('test 3 ok')
+    success('test 4 ok')
 else
-    fail('test 3 failed')
+    fail('test 4 failed')
 
 // _____________________________________________________________
-
+        // -6          -5      -4      -3      -2      -1      0
+         // 0           1       2       3       4       5       6
 var array = ['Raquel', 'Lucas', 'Samuel', null, 'Yoana', 'Blanca']
 var res = fill(array, 'Julio', 'Lucas', null)
 
@@ -79,10 +80,10 @@ if (res instanceof Array
     && res[3] === null
     && res[4] === 'Yoana'
     && res[5] === 'Blanca')
-    success('test 4 ok')
+    success('test 5 ok')
 else
-    fail('test 4 failed')
+    fail('test 5 failed')
 
-    console.log(res)
+    
 
 

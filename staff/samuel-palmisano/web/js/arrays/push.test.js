@@ -21,8 +21,7 @@ else
 var array = ['pigs', 'goats', 'sheep']
 var res = push(array, 'cows', 'chickens', 'cats', 'dogs', 'mouses')
 
-if (typeof res === 'number'
-    && res === 8
+if (array instanceof Array
     && array.length === 8
     && array[0] === 'pigs'
     && array[1] === 'goats'
